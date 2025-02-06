@@ -11,6 +11,36 @@
 *	Edit this section
 *
 * ======================================================= */
+
+
+
+
+
+	
+
+
+
+
+
+
+.modal-img {
+max-width:100%;
+max-height:100%;
+display: block;
+margin: auto;
+position: relative;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
 body {
   font-family: "Karla", Arial, sans-serif;
   line-height: 1.8;
