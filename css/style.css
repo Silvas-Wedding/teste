@@ -14,11 +14,22 @@
 
 
 
+ .handwriting-text {
+            font-family: 'Caveat', cursive;
+            font-size: 28px;
+        }
+
+  
 
 
-	
 
 
+
+
+ .handwriting-text2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 28px;
+        }
 
 
 
@@ -31,6 +42,50 @@ margin: auto;
 position: relative;
   display: inline-block;
 }
+
+
+
+
+
+
+  #countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .countdown-box {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80px;
+            font-size: 1.5em;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .countdown-label {
+            font-size: 0.4em;
+            font-weight: normal;
+            margin-top: 5px;
+            text-align: center;
+   color: #fff;
+        }
+        @media (max-width: 600px) {
+            .countdown-box {
+                width: 60px;
+                font-size: 1.2em;
+                padding: 8px;
+            }
+        }
+
+
+
+
+
 
 
 
