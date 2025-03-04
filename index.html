@@ -130,37 +130,41 @@
  <div id="countdown"></div>
     
     <script>
-        function startCountdown(targetDate) {
-            const countdownElement = document.getElementById('countdown');
-            
-            function updateCountdown() {
-                const now = new Date();
-                const timeDifference = targetDate - now;
-                
-                if (timeDifference > 0) {
-                    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-                    
-                    countdownElement.innerHTML = `
-                        <div class="countdown-box">${days}<span class="countdown-label">dias</span></div>
-                        <div class="countdown-box">${hours}<span class="countdown-label">horas</span></div>
-                        <div class="countdown-box">${minutes}<span class="countdown-label">minutos</span></div>
-                        <div class="countdown-box">${seconds}<span class="countdown-label">segundos</span></div>
-                    `;
-                    setTimeout(updateCountdown, 1000);
-                } else {
-                    countdownElement.innerHTML = "<h2>Time's up!</h2>";
-                }
-            }
-            
-            updateCountdown();
-        }
+
+
+function startCountdown(targetDate) {
+    const countdownElement = document.getElementById('countdown');
+    
+    function updateCountdown() {
+        const now = new Date();
+        const timeDifference = targetDate - now;
         
-        const targetDate = new Date(new Date().getFullYear(), 4, 17, 15, 0, 0); // May 17 at 15:00
-        startCountdown(targetDate);
-    </script>
+        if (timeDifference > 0) {
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+            
+            countdownElement.innerHTML = `
+                <div class="countdown-box">${days}<span class="countdown-label">dias</span></div>
+                <div class="countdown-box">${hours}<span class="countdown-label">horas</span></div>
+                <div class="countdown-box">${minutes}<span class="countdown-label">minutos</span></div>
+                <div class="countdown-box">${seconds}<span class="countdown-label">segundos</span></div>
+            `;
+            setTimeout(updateCountdown, 1000);
+        } else {
+            countdownElement.innerHTML = "<h2>Chegou o dia!</h2>";
+        }
+    }
+    
+    updateCountdown();
+}
+
+// Criar a data no horário correto de Lisboa (sem UTC)
+const targetDate = new Date(2025, 4, 17, 16, 0, 0); // 17 de maio de 2025 às 15:00 no fuso local
+startCountdown(targetDate);
+
+</script>
 
 
 
