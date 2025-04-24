@@ -153,7 +153,21 @@ function startCountdown(targetDate) {
             `;
             setTimeout(updateCountdown, 1000);
         } else {
-            countdownElement.innerHTML = "<h2>Chegou o dia!</h2>";
+
+
+ // Comparando apenas a data (sem a hora)
+            const targetDay = new Date(targetDate.getFullYear(), targetDate.getMonth(), targetDate.getDate());
+            const currentDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+            if (currentDay.getTime() === targetDay.getTime()) {
+                countdownElement.innerHTML = "<h2>Have fun!!</h2>";
+            } else {
+                countdownElement.innerHTML = "<h2>Obrigado a todos pela vossa presen&ccedil;a!  &#10084;</h2>";
+            }
+
+
+
+
         }
     }
     
@@ -161,7 +175,7 @@ function startCountdown(targetDate) {
 }
 
 // Criar a data no horário correto de Lisboa (sem UTC)
-const targetDate = new Date(2025, 4, 17, 16, 0, 0); // 17 de maio de 2025 às 15:00 no fuso local
+const targetDate = new Date(2025, 4, 17, 15, 15, 0); // 17 de maio de 2025 às 15:15 no fuso local
 startCountdown(targetDate);
 
 </script>
@@ -238,7 +252,7 @@ Enviamos assim este <b>convite</b> para que possam fazer parte de um dia de part
 							<p>A cerim&oacute;nia, jantar e festa ser&atilde;o na
 <a href="https://www.google.pt/maps/place/Casa+Sacoto/@39.0553284,-9.1447091,651m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd18d311bee6fecf:0x4fcb9b54e29c6481!8m2!3d39.0553243!4d-9.1421342!16s%2Fg%2F11jlx5kgwf?entry=ttu" target="_blank"><b>Casa Sacoto </b><i class=" icon-map-pin">.</i></a>
 
-Convidamos todos os nossos familiares e amigos a chegar no dia <b>17 de maio de 2025</b>, pelas <b>15h00</b>. <br>
+Convidamos todos os nossos familiares e amigos a chegar no dia <b>17 de maio de 2025</b>, pelas <b>15h15</b>. <br>
 
 <br>Existe lugar de estacionamento para todos. Deixamos 
 <a href="#" class="open-modal-link" id="openModalLink1">aqui</a>
@@ -488,7 +502,13 @@ Estamos a planear uma viagem de lua de mel ao <b>Jap&atilde;o!</b> Um destino qu
 <p>Obrigado!</p>
 <p>Catarina e Hugo</p>
 <br><br>
-<p>Podem usar os nossos mbway ou os IBAN: PT50 0193 0000 1050 0282 9251 0 (Catarina) ou PT50 0023 0000 4550 1912 2649 4 (Hugo) </p>
+<p>Podem usar os nossos mbway ou os IBAN: PT50 0193 0000 1050 0282 9251 0 (Catarina) ou PT50 0023 0000 4550 1912 2649 4 (Hugo) 
+<br><br>
+E como a nossa uni&atilde;o &eacute; um momento de receber, mas tamb&eacute;m de dar, temos o gosto de vos informar que fizemos uma <a href="contribuicao.pdf" target="_blank">doa&ccedil;&atilde;o</a> para a Uni&atilde;o Zo&oacute;fila, associa&ccedil;&atilde;o que estimamos pelo trabalho inacredit&aacute;vel e inesced&iacute;vel que fazem no acolhimento, tratamento e prote&ccedil;&atilde;o dos animais abandonados. Podem conhecer mais do seu trabalho <a href="https://www.uniaozoofila.org/en/" target="_blank">aqui </a>.
+
+  
+</p>
+
 <br>
 
 
